@@ -1,0 +1,5 @@
+#0095BA - Azul esverdeado
+#F36F20 - Laranja
+#CF1259 - Rosa escuro
+#DD7596 - Rosa claro
+#141B41 - Azul Escuro

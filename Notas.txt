@@ -1,0 +1,11 @@
+BtnCadEq
+BtnCadEq2
+
+BtnBuscEq
+BtnBuscEq2
+
+BtnEditEq
+
+BtnDelEq
+
+BtnNovoEnsaio
