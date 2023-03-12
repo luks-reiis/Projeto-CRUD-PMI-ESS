@@ -1,0 +1,72 @@
+Lukas Reis
+Que tipo de controle eu uso para criar um campo em um form para que o usuário insira uma imagem local?
+
+Para permitir que os usuários insiram imagens locais em um formulário do Excel, você pode usar o controle "Image" que pode ser encontrado na guia "Controles" na caixa de ferramentas de controles.
+
+Siga as etapas abaixo para adicionar o controle de imagem ao formulário:
+
+Abra o formulário que você deseja adicionar o controle de imagem.
+Na guia "Desenvolvedor", clique em "Inserir" na seção "Controles".
+Na caixa de ferramentas de controles, encontre o controle "Image" (pode estar em "Mais Controles") e clique nele.
+Clique no formulário para adicionar o controle de imagem.
+Redimensione o controle de imagem conforme necessário.
+Para permitir que o usuário insira uma imagem local no controle de imagem, você pode usar um botão de comando que abre a caixa de diálogo "Inserir Imagem". Quando o usuário seleciona uma imagem, ela é exibida no controle de imagem.
+
+Adicione o seguinte código ao evento "Click" do botão de comando:
+
+Private Sub CommandButton1_Click()
+    Dim strFile As String
+    strFile = Application.GetOpenFilename("Imagens (*.jpg;*.gif;*.png),*.jpg;*.gif;*.png")
+    If strFile = "False" Then
+        Exit Sub
+    Else
+        Me.Image1.Picture = LoadPicture(strFile)
+    End If
+End Sub
+
+Este código abre a caixa de diálogo "Inserir Imagem" usando o método Application.GetOpenFilename. Ele permite que o usuário selecione uma imagem com as extensões .jpg, .gif ou .png.
+
+Em seguida, o código verifica se o usuário selecionou uma imagem. Se o usuário clicar em "Cancelar" ou não selecionar uma imagem, a caixa de diálogo é fechada sem fazer nada.
+
+Se o usuário selecionar uma imagem, ela será exibida no controle de imagem Image1 usando a propriedade Picture e o método LoadPicture.
+
+Lembre-se de alterar o nome do controle de imagem e do botão de comando para corresponder aos nomes usados em seu formulário.
+
+
+
+
+Lukas Reis
+Dá pra salvar essa imagem em uma célula do excel?
+Não é possível salvar uma imagem diretamente em uma célula do Excel, mas você pode salvar o caminho da imagem na célula e exibir a imagem em um controle de imagem. Isso pode ser útil se você quiser criar uma lista de imagens com suas descrições em uma planilha.
+
+Para salvar o caminho da imagem na célula, você pode usar o mesmo código que eu forneço na minha resposta anterior para permitir que o usuário selecione uma imagem. Em seguida, você pode armazenar o caminho da imagem na célula selecionada usando o seguinte código:
+
+
+Private Sub CommandButton1_Click()
+    Dim strFile As String
+    strFile = Application.GetOpenFilename("Imagens (*.jpg;*.gif;*.png),*.jpg;*.gif;*.png")
+    If strFile = "False" Then
+        Exit Sub
+    Else
+        ActiveCell.Value = strFile
+        Me.Image1.Picture = LoadPicture(strFile)
+    End If
+End Sub
+
+Este código armazena o caminho da imagem selecionada na célula ativa usando a propriedade Value do objeto ActiveCell.
+
+Em seguida, você pode exibir a imagem na célula usando um controle de imagem. Basta selecionar o controle de imagem na caixa de ferramentas de controles e posicioná-lo na célula onde você armazenou o caminho da imagem. Em seguida, defina a propriedade Picture do controle de imagem usando o valor da célula.
+
+Para fazer isso, adicione o seguinte código ao evento "Activate" da planilha:
+
+
+Private Sub Worksheet_Activate()
+    If Not ActiveCell.Value = "" Then
+        Me.Image1.Picture = LoadPicture(ActiveCell.Value)
+    End If
+End Sub
+
+
+Este código verifica se a célula ativa contém um caminho de imagem. Se sim, ele exibe a imagem no controle de imagem Image1. Note que este código deve ser adicionado ao código da planilha, e não ao código do formulário.
+
+Lembre-se de que, se você mover a célula onde a imagem está armazenada, você precisará atualizar o caminho da imagem na célula para que o controle de imagem possa exibir a imagem corretamente.

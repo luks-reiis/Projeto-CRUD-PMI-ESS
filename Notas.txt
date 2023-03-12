@@ -1,11 +1,11 @@
-BtnCadEq
-BtnCadEq2
+BtnEqTP
 
-BtnBuscEq
-BtnBuscEq2
+BtnEqTC
 
-BtnEditEq
+BtnEqPR
 
-BtnDelEq
+BtnEqTrafo
 
-BtnNovoEnsaio
+BtnEqCS
+
+BtnEqDJ

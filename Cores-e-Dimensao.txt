@@ -3,3 +3,5 @@
 #CF1259 - Rosa escuro
 #DD7596 - Rosa claro
 #141B41 - Azul Escuro
+
+Dimensao dos formularios: 780 X 465
