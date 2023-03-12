@@ -1,0 +1,16 @@
+Para fazer um botão de um formulário do VBA direcionar para um link, você pode usar o seguinte código:
+
+Abra o formulário que você deseja adicionar o botão.
+Clique duas vezes no botão de comando para abrir a janela de código.
+Adicione o seguinte código dentro da função correspondente ao botão:
+
+Private Sub CommandButton1_Click()
+    Dim URL As String
+    URL = "http://www.exemplo.com.br"
+    Shell "explorer.exe """ & URL & """", vbNormalFocus
+End Sub
+
+Substitua o link http://www.exemplo.com.br pelo link que deseja direcionar quando o botão for pressionado.
+Salve e feche a janela de código.
+Teste o botão clicando nele.
+O código acima usa o comando Shell para abrir o navegador padrão do sistema e navegar para o link especificado. O comando explorer.exe é usado para abrir o navegador e vbNormalFocus é usado para focar na janela do navegador que foi aberta.
