@@ -32,7 +32,7 @@ Se o usuário selecionar uma imagem, ela será exibida no controle de imagem Ima
 
 Lembre-se de alterar o nome do controle de imagem e do botão de comando para corresponder aos nomes usados em seu formulário.
 
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 Lukas Reis
@@ -70,3 +70,27 @@ End Sub
 Este código verifica se a célula ativa contém um caminho de imagem. Se sim, ele exibe a imagem no controle de imagem Image1. Note que este código deve ser adicionado ao código da planilha, e não ao código do formulário.
 
 Lembre-se de que, se você mover a célula onde a imagem está armazenada, você precisará atualizar o caminho da imagem na célula para que o controle de imagem possa exibir a imagem corretamente.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Lukas Reis
+
+código em vba para que a picture de um campo de imagem ocupe toda a area do campo de imagem, ou seja não corte se o campo da imagem for menor que a picture e não fique pequeno se a imagem for pequena
+Para que a imagem selecionada ocupe toda a área do campo de imagem, sem ser cortada ou reduzida, você pode utilizar o seguinte código VBA:
+
+vbnet
+Copy code
+Private Sub UserForm_Initialize()
+    'Diminui a escala da imagem para caber no controle de imagem
+    Me.Image1.PictureSizeMode = fmPictureSizeModeZoom
+
+    'Alinha a imagem dentro do controle de imagem
+    Me.Image1.PictureAlignment = 2 'Centro
+End Sub
+Neste código, definimos duas propriedades do controle de imagem, a propriedade PictureSizeMode e a propriedade PictureAlignment.
+
+A propriedade PictureSizeMode é definida como fmPictureSizeModeZoom, o que significa que a imagem será redimensionada para caber dentro do controle de imagem, sem perder a proporção. Isso garante que a imagem não será cortada e não ficará pequena.
+
+A propriedade PictureAlignment é definida como 2, que alinha a imagem no centro do controle de imagem.
+
+Certifique-se de substituir "Image1" pelo nome do seu campo de imagem.
