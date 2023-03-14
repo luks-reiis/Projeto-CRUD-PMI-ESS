@@ -1,0 +1,48 @@
+Lukas Reis
+Acho que você não entendeu, durante um evento do programa a picture do image pode ser alterada, no entanto ao eu executar o LimparControles() eu quero que a picture padrão do image volte
+
+Entendi, obrigado por esclarecer. Nesse caso, você pode armazenar a imagem padrão do controle Image em uma variável global ou em alguma outra propriedade do formulário para restaurá-la posteriormente quando necessário.
+
+Aqui está um exemplo de como fazer isso:
+
+Declare uma variável global para armazenar a imagem padrão:
+vbnet
+Copy code
+Dim imagemPadrao As Variant
+No evento "UserForm_Initialize" do formulário, atribua a imagem padrão à variável global e defina a imagem padrão para a propriedade "Picture" do controle Image:
+vbnet
+Copy code
+Private Sub UserForm_Initialize()
+    ' Armazena a imagem padrão
+    imagemPadrao = Image1.Picture
+
+    ' Define a imagem padrão para o controle Image
+    Image1.Picture = imagemPadrao
+End Sub
+No código que altera a imagem do controle Image, você pode armazenar a nova imagem em uma variável separada ou em uma propriedade do formulário.
+
+No código "LimparControles", verifique se o controle Image tem uma imagem definida. Se não tiver, defina a imagem padrão armazenada na variável global. Se tiver, remova a imagem atualmente definida.
+
+vbnet
+Copy code
+Private Sub LimparControles()
+    Dim ctl As Control
+    For Each ctl In Me.Controls
+        If TypeOf ctl Is MSForms.TextBox Then
+            ctl.Value = ""
+        ElseIf TypeOf ctl Is MSForms.ComboBox Then
+            ctl.Value = ""
+        ElseIf TypeOf ctl Is MSForms.Image Then
+            If ctl.Picture = Nothing Then
+                ' Define a imagem padrão
+                ctl.Picture = imagemPadrao
+            Else
+                ' Remove a imagem atual
+                Set ctl.Picture = Nothing
+            End If
+        End If
+    Next ctl
+End Sub
+Esse código verifica se a propriedade "Picture" do controle Image é igual a "Nothing". Se for, define a imagem padrão armazenada na variável global. Caso contrário, remove a imagem atualmente definida.
+
+Espero que isso ajude!

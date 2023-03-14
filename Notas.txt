@@ -1,11 +1,17 @@
-BtnEqTP
-
-BtnEqTC
-
-BtnEqPR
-
-BtnEqTrafo
-
-BtnEqCS
-
-BtnEqDJ
+ImgCadTC      Image
+TxBxCodCadTC  TextBox
+TxBxClienteCadTC            TextBox
+TxBxIdCadTC   TextBox
+TxBxFabCadTC  TextBox
+TxBxTipoCadTC TextBox
+TxBxAnoFabCadTC             TextBox
+TxBxPesoTotCadTC            TextBox
+TxBxNBICadTC  TextBox
+TxBxFatTermCadTC            TextBox
+TxBxClassTensCadTC          TextBox
+CBIsolCadTC   ComboBox
+TxBxExatCadTC TextBox
+TxBxRelCadTC  TextBox
+TxBxSrFaseRCadTC            TextBox
+TxBxSrFaseSCadTC            TextBox
+TxBxSrFaseTCadTC            TextBox
