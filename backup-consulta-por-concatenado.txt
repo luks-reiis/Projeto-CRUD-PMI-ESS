@@ -1,0 +1,56 @@
+Private Sub TxBxFindEq_Change()
+
+    Dim lstCli      As Range
+    Dim vTipoEq     As Range
+    Dim vCod        As Range
+    Dim vCliente    As Range
+    Dim vIdent      As Range
+    Dim vInic       As Range
+    Dim vLin        As Long
+    Dim Concat      As Range
+    
+    On Error Resume Next
+    Me.LBDadosEq.Clear
+    If Len(Me.TxBxFindEq) = 0 Then
+        Call UserForm_Initialize
+        LBPesqEq.Visible = True
+    Else
+        
+        vLin = Application.WorksheetFunction.CountA(wPlan1.Range("F:F"))
+        Set lstCli = wPlan1.Range("F2:F" & vLin)
+        Set Concat = lstCli.Find(Me.TxBxFindEq, , , xlPart)
+        Set vCod = Concat.Offset(0, -5)
+        Set vTipoEq = Concat.Offset(0, -4)
+        Set vCliente = Concat.Offset(0, -3)
+        Set vIdent = Concat.Offset(0, -2)
+        
+        LBPesqEq.Visible = False
+        
+        If Not Concat Is Nothing Then
+        
+            Set vInic = Concat
+            
+                Do
+                    With Me.LBDadosEq
+
+
+                        .AddItem
+                        .List(.ListCount - 1, 0) = vCod
+                        .List(.ListCount - 1, 1) = vTipoEq
+                        .List(.ListCount - 1, 2) = vCliente
+                        .List(.ListCount - 1, 3) = vIdent
+                        
+                    End With
+                    
+                    Set Concat = lstCli.FindNext(Concat)
+                    Set vCod = Concat.Offset(0, -5)
+                    Set vTipoEq = Concat.Offset(0, -4)
+                    Set vCliente = Concat.Offset(0, -3)
+                    Set vIdent = Concat.Offset(0, -2)
+                    
+                Loop Until Concat.Address = vInic.Address
+            
+        End If
+    End If
+    
+End Sub
