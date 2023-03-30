@@ -1,9 +1,18 @@
-LBPesqEq
-TxBxFindEq
-LBDadosEq
+EditDelEqDisjuntor
 
 
-    'caminhoImagemPadrao = ThisWorkbook.Path & "\Icons\imagemplaceholder.jpg"
-    'ImgCadCS.Picture = LoadPicture(caminhoImagemPadrao)
-    'ImgCadCS.PictureSizeMode = fmPictureSizeModeZoom
-    'ImgCadCS.PictureAlignment = 2
+ImgCadDisjuntor
+BtnImgCadDisjuntor
+TxBxCodCadDisjuntor
+TxBxClienteCadDisjuntor
+TxBxIdCadDisjuntor
+TxBxFabCadDisjuntor
+TxBxTipoCadDisjuntor
+TxBxAnoFabCadDisjuntor
+TxBxCIntCadDisjuntor
+TxBxNSerCadDisjuntor
+TxBxCNomCadDisjuntor
+TxBxTNomCadDisjuntor
+TxBxARelCadDisjuntor
+CBTipoMecCadDisjuntor
+CBTipoRelCadDisjuntor
