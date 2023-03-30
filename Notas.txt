@@ -1,3 +1,9 @@
 LBPesqEq
 TxBxFindEq
 LBDadosEq
+
+
+    'caminhoImagemPadrao = ThisWorkbook.Path & "\Icons\imagemplaceholder.jpg"
+    'ImgCadCS.Picture = LoadPicture(caminhoImagemPadrao)
+    'ImgCadCS.PictureSizeMode = fmPictureSizeModeZoom
+    'ImgCadCS.PictureAlignment = 2
