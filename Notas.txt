@@ -13,8 +13,8 @@ TxBxPesoTotCadTrafo
 TxBxNSerCadTrafo
 TxBxPotCadTrafo
 TxBxImpCadTrafo
-CBIsolCadTrafo
-TxBxVOleCadTrafo
+	CBIsolCadTrafo
+	TxBxVOleCadTrafo
 TxBxGLigTrafo
 CBTipoTAPCadTrafo
 TxBxFabTAPCadTrafo
