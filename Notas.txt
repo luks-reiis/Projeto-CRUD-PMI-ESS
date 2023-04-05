@@ -1,22 +1,14 @@
-EditDelEqTrafo
+EditDelEqChaveSeccionadora
 
 
-ImgCadTrafo
-BtnImgCadTrafo
-TxBxCodCadTrafo
-TxBxClienteCadTrafo
-TxBxIdCadTrafo
-TxBxFabCadTrafo
-TxBxTipoCadTrafo
-TxBxAnoFabCadTrafo
-TxBxPesoTotCadTrafo
-TxBxNSerCadTrafo
-TxBxPotCadTrafo
-TxBxImpCadTrafo
-	CBIsolCadTrafo
-	TxBxVOleCadTrafo
-TxBxGLigTrafo
-CBTipoTAPCadTrafo
-TxBxFabTAPCadTrafo
-TxBxUPrimCadTrafo
-TxBxUSecCadTrafo
+ImgCadCS
+BtnImgCadCS
+TxBxCodCadCS
+TxBxClienteCadCS
+TxBxIdCadCS
+TxBxFabCadCS
+TxBxTipoCadCS
+TxBxSerieFabCadCS
+TxBxTenNomCadCS
+TxBxCorNomCadCS
+CBTipoMecCadCS
