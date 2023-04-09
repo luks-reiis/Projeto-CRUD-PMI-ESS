@@ -1,2 +1,7 @@
-MostrarPastaTrabalho
-NaoMostrarPastaTrabalho
+ContatoForm
+
+LogoLinkedin
+LogoGithub
+LbTitulo
+LinkLinkedin
+LinkGithub
