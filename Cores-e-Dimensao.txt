@@ -1,7 +1,0 @@
-#0095BA - Azul esverdeado
-#F36F20 - Laranja
-#CF1259 - Rosa escuro RGB(207, 18, 89)
-#DD7596 - Rosa claro 
-#141B41 - Azul Escuro RGB(20, 27, 65)
-
-Dimensao dos formularios: 780 X 465

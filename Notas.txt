@@ -1,7 +1,0 @@
-ContatoForm
-
-LogoLinkedin
-LogoGithub
-LbTitulo
-LinkLinkedin
-LinkGithub
